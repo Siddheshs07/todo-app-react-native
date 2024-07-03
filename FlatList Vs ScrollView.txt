@@ -1,0 +1,21 @@
+   ScrollView:
+   in ScrollView everything is as View component but when can perform scrolling action that we cant do in View..
+   Problems with ScrollView:
+   the problem with "ScrollView" is that it loads or renders all data that even not being visible on screen this might leads to performance issue due to unnecessary loading of data.
+   to solve this issue we are now replaceing "ScrollView" with "FlatList".
+   FlatList will lazyload the data. 
+-------------------------------------------------------------------------------------------------------------
+   FlatList:
+        to map the data in the flat list we need to provide 2 props 
+        1. data and  2.renderItem 
+
+        1.data will hold all the data coming from the source. 
+        2. renderItem will take a function to  map the data. 
+        we define function to display required data.
+        ===> two ways to adding keys to items,
+        1. convert premitive values of data in object format which should have a key property as we did in this example
+        2.if the data is coming from API and does not have key property, and you cant influence its shape and  and you dont want to transform just because FlatList needs it.
+        render item is responsible for genereting the jsx code that should render for every item
+        ====> Flatlist provides a prop "keyExtractor" which takes a inline arrow function which automatically recieves 2 values: item and index from FlatList
+        "keyExtractor is responible for to get key for out of every item which will be attached to every item by Flatlist"
+        

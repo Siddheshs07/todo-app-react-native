@@ -1,0 +1,4 @@
+Pressable:
+to make an element Pressable react native provides folloing components
+1. Pressable {new method}
+2. Touchable and various related components ex:(TouchableHighlight, TouchableOpacity) {these are old methods or components}
