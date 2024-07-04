@@ -30,17 +30,11 @@ export default function App() {
     <>
       <StatusBar style='dark' />
       <View style={styles.appContainer}>
-        <Button
-          title='Add a new Goal'
-          color='teal'
-          onPress={startAddGoalHandler}
-        />
         <GoalInput
           onAddGoal={addGoalHandler}
           visible={modalIsVisible}
           onCancle={endAddGoalHandler}
         />
-
         <View style={styles.goalsContainer}>
           {/* replaced ScrollView to FlatList in order to Lazy Load the data */}
           {goalLists.length === 0 ? (
@@ -69,6 +63,13 @@ export default function App() {
             }}
           />
         </View>
+        <View style={styles.button}>
+          <Button
+            title='Add a new Goal'
+            color='teal'
+            onPress={startAddGoalHandler}
+          />
+        </View>
       </View>
     </>
   )
@@ -83,9 +84,6 @@ const styles = StyleSheet.create({
 
   goalsContainer: {
     flex: 5,
-    marginTop: 25,
-    borderTopWidth: 1,
-    borderTopColor: 'black',
   },
   goalHeading: {
     textAlign: 'center',
@@ -97,5 +95,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 20,
     fontWeight: '400',
+  },
+  button: {
+    marginVertical: 25,
   },
 })
