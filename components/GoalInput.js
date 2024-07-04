@@ -28,7 +28,7 @@ function GoalInput({ onAddGoal, visible, onCancle }) {
             <Button title='Cancle' onPress={onCancle} color='red' />
           </View>
           <View style={styles.button}>
-            <Button title='Add Goal' onPress={addGoalhandler} color='#009aa6' />
+            <Button title='Add Goal' onPress={addGoalhandler} color='#0070ff' />
           </View>
         </View>
       </View>
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 16,
-    backgroundColor: '#a7e6d7',
+    backgroundColor: '#1ABC9C',
   },
   textInput: {
     borderWidth: 1,
